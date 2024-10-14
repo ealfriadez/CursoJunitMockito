@@ -9,11 +9,22 @@ class CalculandoPrueba {
 
 	@Test
 	@DisplayName("Probar las aserciones booleanas")
-	void testAsetions() {		
+	void testAsetions() {	
+		
+		boolean flag = true;
+		boolean flag2 = false;
+		
+		assertTrue(flag, "Flag deberia ser TRUE");
+		assertFalse(flag2, "Flag deberia ser FALSE");
 	}
 
 	@Test
 	@DisplayName("Probar las aserciones booleanassss")
-	void testAsetions1() {		
+	void testAsetionsObjetoNull() {
+		
+		String valor = "Hola";
+		
+		assertNull(null, "El objeto deberia ser nulo");
+		assertNotNull(valor, "El objeto deberia no ser nulo");
 	}
 }
