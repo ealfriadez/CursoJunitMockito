@@ -24,4 +24,8 @@ public class Calculadora {
 		resultado = resultado + valor1;
 		return resultado;
 	}
+	
+	public int dividir(int valor1, int valor2) {
+		return valor1 / valor2;
+	}
 }
