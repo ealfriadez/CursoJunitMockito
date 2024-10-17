@@ -1,20 +1,20 @@
 package pe.edu.unfv.courses.ejemplo;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 class CadenaMayuscula {
 
-	@Test
-	@DisplayName("Probar las aserciones booleanassss")
-	void testAsetionsObjetoNull() {
-		
-		String valor = "Hola";
-		
-		assertNull(null, "El objeto deberia ser nulo");
-		assertNotNull(valor, "El objeto deberia no ser nulo");
+	@ParameterizedTest
+	@CsvSource({"java,JAVA", "Java,JAVA", "JAVa, JAVA"})
+	void testAsetionsObjetoNull(String valorEntrada, String valorEsperado) {
+				
+		//assertEquals(valorEsperado, Cadenas);
 	}
 }
