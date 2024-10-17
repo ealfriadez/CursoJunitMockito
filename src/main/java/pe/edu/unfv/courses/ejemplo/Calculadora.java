@@ -28,4 +28,8 @@ public class Calculadora {
 	public int dividir(int valor1, int valor2) {
 		return valor1 / valor2;
 	}
+	
+	public boolean esImpar(int valor) {
+		return (valor % 2) != 0;
+	}
 }
