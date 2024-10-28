@@ -1,5 +1,7 @@
 package pe.edu.unfv.courses.ejemplo;
 
+import java.util.stream.Stream;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -33,5 +35,9 @@ public class OrdenandoTest {
 	@Order(1)
 	void testTres() {
 		System.out.println("Test nro. 3");
+	}
+	
+	public static Stream<String> providesBlankSource(){
+		return Stream.of("", null, "   ");
 	}
 }
